@@ -63,15 +63,15 @@ o usar VS Code con Live Server
 
 📁 Estructura del proyecto
 
-/css
-/favicon_io
-/fonts
-/html
-/js
-/media
-index.html
-LICENSE
-README.md
+- /css
+- /favicon_io
+- /fonts
+- /html
+- /js
+- /media
+- index.html
+- LICENSE
+- README.md
 
 👤 Autor
 
