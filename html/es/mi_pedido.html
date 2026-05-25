@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="traducible" data-key="titulo_pagina_pedido">New Horizons - Mi pedido</title>
+    <link rel="stylesheet" href="../../css/es/mi_pedido.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    
+    <link rel="icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon_io/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section id="fondo" class="opacidad">
+
+        <section id="contenido_general">
+            
+            <header>
+                <img id="titulos" src="../../media/img/Iconos/titulo_newhorizons.png" alt="titulo_new_horizons">
+    
+                <!-- Menú superior en línea-->
+                <nav id="menu_media_query">
+                    <ul>
+                        <a href="la_carta.html"><li class="traducible" data-key="texto_menu_superior_carta">LA CARTA</li></a>
+                        <a href="restaurantes.html"><li class="traducible" data-key="texto_menu_superior_restaurantes">RESTAURANTES</li></a>
+                        <a href="quienes_somos.html"><li class="traducible" data-key="texto_menu_superior_quienes_somos">¿QUIÉNES SOMOS?</li></a>
+                        <a href="novedades.html"><li class="traducible" data-key="texto_menu_superior_novedades">NOVEDADES</li></a>
+                        <a href="contacto.html"><li class="traducible" data-key="texto_menu_superior_contacto">CONTACTO</li></a>
+                    </ul>
+                </nav>
+                
+                <img id="menu_hamburguesa" src="../../media/img/Iconos/menu_hamburgesa_white.png" alt="menu_hamburguesa">
+                <img id="menu_hamburguesa_verde" src="../../media/img/Iconos/menu_hamburguesa.png" alt="menu_hamburguesa_verde">
+           </header>
+    
+           <section id="desplegable">
+                <nav id="lista">
+                    <ul>
+                        <li class="traducible seleccionable" data-key="texto_menu_desplegable_carta">LA CARTA</li>
+                        <li class="traducible seleccionable" data-key="texto_menu_desplegable_restaurantes">RESTAURANTES</li>
+                        <li class="traducible seleccionable" data-key="texto_menu_desplegable_quienes_somos">¿QUIÉNES SOMOS?</li>
+                        <li class="traducible seleccionable" data-key="texto_menu_desplegable_novedades">NOVEDADES</li>
+                        <li class="traducible seleccionable" data-key="texto_menu_desplegable_contacto">CONTACTO</li>
+                    </ul>
+                </nav>
+    
+                <div id="footer_desplegable">
+    
+                    <a class="bandera" href="../../index.html" data-lang="es"><img class="ampliar" src="../../media/img/Iconos/espana.png" alt="bandera_espana"></a>
+                    <a class="bandera" href="../../index.html" data-lang="it"><img class="ampliar" src="../../media/img/Iconos/italia.png" alt="bandera_italia"></a>
+                    <a class="bandera" href="../../index.html" data-lang="en"><img class="ampliar" src="../../media/img/Iconos/uk.png" alt="bandera_uk"></a>
+                </div>
+           </section>
+    
+           <section id="filtro_oscurecer"></section>
+    
+           <section id="plantilla_general">
+
+                <div id="cabecera_box">
+                    <img id="flecha_volver" src="../../media/img/Iconos/go_back.png" alt="flecha_volver">
+                    <h1 id="title_pedido" class="traducible fuente_montserrat_verde" data-key="titulo_pedido">Mi pedido</h1>
+                    <img id="imagen_basura" src="../../media/img/Iconos/trash.png" alt="vaciar_carrito">
+                </div>
+
+                <div id="alert">
+                    <h2 id="ops" class="fuente_montserrat">¡Ooops!</h2>
+                    <h2 id="alert_text" class="fuente_montserrat traducible" data-key="texto_alerta">No has pedido nada todavía. <br> ¡Echa un vistazo a la carta!</h2>
+                    <a href="../../html/es/la_carta.html">
+                        <h2 id="ver_carta" class="fuente_montserrat_verde traducible" data-key="texto_ver_carta">Ver carta</h2>
+                    </a>
+                </div>
+
+                <div id="carrito"></div>
+
+                <footer id="footer_add_order">
+
+                    <section id="main_pay_box" class="ocultar_al_continuar">
+
+                        <img id="icono_cerrar" src="../../media/img/Iconos/cerrar.png" alt="icono_cerrar">
+                        
+                        <h2 id="title_pedido_footer" class="fuente_montserrat_verde" data-key="titulo_pedido_footer">MI PEDIDO</h2>
+                        <h2 class="fuente_montserrat">1 - Datos personales</h2>
+
+                        <form id="formulario_datos_personales" class="formulario" action="post">
+                            
+                            <input type="text" required name="nombre" id="nombre" placeholder="Nombre *">
+                            <input type="text" name="apellidos" id="apellidos" placeholder="Apellido(s)">
+                            <input type="text" required name="direccion" id="direccion" placeholder="Dirección *">
+                            <input type="text" required name="pais" id="pais" placeholder="País *">
+                            <input type="text" required name="ciudad" id="ciudad" placeholder="Ciudad *">
+                            <input type="text" required name="post_code" id="post_code" placeholder="Código postal *">
+                            <input type="email" required name="correo" id="correo" placeholder="Correo electrónico *">
+                            <input type="tel" name="telefono" id="telefono" placeholder="Número de móvil">
+                        </form>
+
+                        <h2 class="fuente_montserrat">2 - Tipo de envío</h2>
+
+                        <section id="formulario_envio" class="formulario">
+
+                            <div id="box_envio_economico" class="box_envio">
+                                <div id="envio_economico" class="opcion_envio">
+                                    <h2 class="fuente_montserrat_verde">Envío económico</h2>
+                                    <h3 class="fuente_montserrat">Recíbelo en 40-60 minutos</h3>
+                                </div>
+
+                                <div id="precio_envio_economico" class="box_precio">
+                                    <h2 class="fuente_montserrat_verde">+ 1.50€</h2>
+                                </div>
+                            </div>
+                            
+
+                            <div id="box_envio_estandar" class="box_envio">
+                                <div id="envio_estandar" class="opcion_envio">
+                                    <h2 class="fuente_montserrat_verde">Envío estándar</h2>
+                                    <h3 class="fuente_montserrat">Recíbelo en 30-40 minutos</h3>
+                                </div>
+
+                                <div id="precio_envio_estandar" class="box_precio">
+                                    <h2 class="fuente_montserrat_verde">+ 2.50€</h2>
+                                </div>
+                            </div>
+
+                            <div id="box_envio_premium" class="box_envio">
+                                <div id="envio_premium" class="opcion_envio">
+                                    <h2 class="fuente_montserrat_verde">Envío premium</h2>
+                                    <h3 class="fuente_montserrat">Recíbelo en 15-20 minutos</h3>
+                                </div>
+
+                                <div id="precio_envio_economico" class="box_precio">
+                                    <h2 class="fuente_montserrat_verde">+ 4.00€</h2>
+                                </div>
+                            </div>
+
+                            <h3 id="cambiar_envio" class="fuente_montserrat">Cambiar método de envío</h3>
+                        </section>
+
+                        <h2 class="fuente_montserrat">3 - Método de pago</h2>
+
+                        <section id="formulario_pago" class="formulario">
+                            <div class="opcion_pago">
+                                <img class="image_payment" src="../../media/img/Iconos/cash_pay.png" alt="pago_efectivo">
+                                <h2 class="fuente_montserrat_verde">En efectivo</h2>
+                            </div>
+
+                            <div class="opcion_pago">
+                                <img class="image_payment" src="../../media/img/Iconos/mastercard_pay.png" alt="pago_mastercard">
+                                <img class="image_payment" src="../../media/img/Iconos/visa_pay.png" alt="pago_visa">
+                                <h2 class="fuente_montserrat_verde">Tarjeta de crédito</h2>
+                            </div>
+
+                            <div class="opcion_pago">
+                                <img class="image_payment" src="../../media/img/Iconos/bank_pay.png" alt="pago_transferencia">
+                                <h2 class="fuente_montserrat_verde">Transferencia bancaria</h2>
+                            </div>
+
+                            <div class="opcion_pago">
+                                <img class="image_payment" src="../../media/img/Iconos/bizum_pay.png" alt="pago_bizum">
+                                <h2 class="fuente_montserrat_verde">Bizum</h2>
+                            </div>
+
+                            <h3 id="cambiar_pago" class="fuente_montserrat">Cambiar método de pago</h3>
+
+                            <div id="solo_efectivo" class="desplegable_pagos">
+                                <h3 class="fuente_montserrat_verde">Condiciones:</h3>
+                                <h4 class="fuente_montserrat">
+                                    El cliente se compromete a pagar la totalidad del pedido al repartidor. Este método de pago
+                                    no admite pagos con tarjeta de crédito (el repartidor no lleva datáfono). Por la seguridad del negocio, no admitimos billetes de 500€. 
+                                    Está permitido recompensar al repartidor con una propina si el cliente está satisfecho
+                                    con su trabajo.
+                                </h4>
+                            </div>
+
+                            <div id="solo_tarjeta" class="desplegable_pagos">
+                                <form id="formulario_tarjeta_credito" action="post">
+                                    <input type="text" required name="num_tarjeta" id="num_tarjeta" placeholder="Número de tarjeta*">
+                                    <input type="date" required name="fecha_exp" id="fecha_exp" placeholder="Fecha Exp.*">
+                                    <input type="text" required name="cvv" id="cvv" placeholder="CVV*">
+                                </form>
+                                
+                                <h4 class="fuente_montserrat">
+                                    En New Horizons velamos por la seguridad de nuestros clientes y por eso les garantizamos un
+                                    pago 100% seguro y sin complicaciones.
+                                </h4>
+                            </div>
+
+                            <div id="solo_transferencia" class="desplegable_pagos">
+                                <h3 class="fuente_montserrat_verde">Condiciones:</h3>
+                                <h4 class="fuente_montserrat">
+                                    Realice una transferencia a la siguiente cuenta bancaria:
+                                </h4>
+                                <h3 id="num_cuenta_bancaria" class="fuente_montserrat_verde">ES32 0425 4912 17 9976621863</h3>
+                                <h4 class="fuente_montserrat">
+                                    Recibirá su pedido en el tiempo de entrega establecido (ver métodos de envío) y no le haremos esperar a
+                                    que hayamos recibido su dinero. La transferencia deberá efectuarse en un plazo de 24h desde el momento en el que
+                                    realice el pedido.
+                                </h4>
+                            </div>
+
+                            <div id="solo_bizum" class="desplegable_pagos">
+                                <h3 class="fuente_montserrat_verde">Condiciones:</h3>
+                                <h4 class="fuente_montserrat">
+                                    Realice un Bizum al siguiente número de teléfono:
+                                </h4>
+                                <h3 id="num_telefono" class="fuente_montserrat_verde">602 221 953</h3>
+                                <h4 class="fuente_montserrat">
+                                    E indique en "asunto" el siguiente código de un solo uso junto a su nombre y apellidos:
+                                </h4> 
+                                <h3 id="num_aleatorio" class="fuente_montserrat_verde"></h3>
+                            </div>
+                            
+                        </section>
+
+                        <h2 class="fuente_montserrat">4 - Códigos descuento y cheques regalo</h2>
+
+                        <form id="formulario_promocional" class="formulario" action="post">
+                            <h3 class="fuente_montserrat">¿Tienes códigos descuento de fidelidad?</h3>
+                            <div class="descuento_block">
+                                <input type="text" name="codigo_descuento" id="codigo_descuento" placeholder="Código descuento">
+                                <div class="boton_add">
+                                    <h2 class="fuente_montserrat_verde texto_boton_add">Añadir</h2>
+                                </div>
+                            </div>
+                            <h4 class="fuente_montserrat message_info"></h4>
+
+                            <h3 class="fuente_montserrat">¿Tienes un cheque regalo?</h3>
+                            <div class="descuento_block">
+                                <input type="text" name="cheque_regalo" id="cheque_regalo" placeholder="Código regalo">
+                                <div class="boton_add">
+                                    <h2 class="fuente_montserrat_verde texto_boton_add">Añadir</h2>
+                                </div>
+                            </div>
+                            <h4 class="fuente_montserrat message_info"></h4>
+                            
+                        </form>
+
+                        <h2 id="resumen_pedido_texto" class="fuente_montserrat">5 - Resumen del pedido</h2>
+                    </section>
+
+                    <div id="extra_charges" class="ocultar_al_continuar">
+                        <h2 id="gastos_pedido" class="fuente_montserrat elemento_costes"></h2>
+                        <h2 id="gastos_envio" class="fuente_montserrat elemento_costes"></h2>
+                        <h2 id="cupon_descuento" class="fuente_montserrat elemento_costes"></h2>
+                        <h2 id="cheques_regalo" class="fuente_montserrat elemento_costes"></h2>
+                    </div>
+                
+                    <section id="data_pay_box" class="ocultar_al_continuar">
+                        <div id="total_order_box">
+                            <h2 id="total_text" class="fuente_montserrat_verde traducible" data-key="texto_total">Total:</h2>
+                            <h2 id="suma_total_pedido" class="fuente_montserrat"></h2>
+                        </div>
+        
+                        <div id="boton_continuar" class="ocultar_al_continuar">
+                            <h2 id="texto_btn_continuar" class="fuente_montserrat_verde traducible" data-key="texto_continuar">CONTINUAR</h2>
+                        </div>
+                    </section>
+
+                    <section id="cargando_orden">
+                        <div class="loader"></div>
+                        <h2 class="fuente_montserrat">Preparando su pedido...</h2>
+                    </section>
+
+                    <section id="pedido_confirmado">
+                        <img src="../../media/img/Iconos/logo_nh.png" alt="logo">
+                        <h2 class="fuente_montserrat_verde">PEDIDO REALIZADO</h2>
+                        <h4 id="num_pedido" class="fuente_montserrat_verde"></h4>
+                        <p id="descripcion_pedido" class="fuente_montserrat"></p>
+                        <h4 id="direccion_confirmada" class="fuente_montserrat_verde"></h4>
+                        <p id="repartidor_llegara" class="fuente_montserrat"></p>
+                        <h4 id="tiempo_confirmado" class="fuente_montserrat_verde"></h4>
+                        <p id="correo_confirmado" class="fuente_montserrat"></p>
+
+                        <div id="box_botones_finpedido">
+                            <h3 id="ir_pedido" class="fuente_montserrat boton_finpedido">NUEVO PEDIDO</h3>
+                            <h3 id="ir_newhorizons" class="fuente_montserrat boton_finpedido">VOLVER A NEW HORIZONS</h3>
+                        </div>
+                        
+                    </section>
+                    
+               </footer>
+           </section>
+
+        </section>
+
+    </section>
+
+    <script src="../../js/es/mi_pedido.js"></script>
+    <script src="../../js/idiomas.js"></script>
+</body>
+
+</html>

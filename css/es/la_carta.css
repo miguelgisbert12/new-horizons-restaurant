@@ -1,0 +1,1061 @@
+/* Valores genéricos */
+/* --------------------------------- */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Paleta de colores: */
+/* --------------------------------- */
+
+.blanco {
+    color: white;
+}
+
+.verde {
+    color: #c9e265;
+}
+
+.negro {
+    color: #1a1b1e;
+}
+
+.color_fondo {
+    background-color: #18191b;
+}
+
+body {
+    background-color: #18191b;
+    
+}
+
+/* Imagen de fondo */
+/* --------------------------------- */
+
+#fondo {
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 2s;
+    overflow-y: hidden;
+}
+
+/* Header */
+/* --------------------------------- */
+
+#titulos {
+    width: 45%;
+    max-width: 330px;
+    object-fit: contain;
+}
+
+#titulos:hover {
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 50px 20px;
+    z-index: 2;
+}
+
+#menu_hamburguesa {
+    max-width: 60px;
+    margin: 10px 20px 0px 0px;
+}
+
+#menu_hamburguesa:hover {
+    cursor: pointer;
+}
+
+#menu_hamburguesa_verde {
+    max-width: 60px;
+    margin: 10px 20px 0px 0px;
+    display: none;
+}
+
+#menu_hamburguesa_verde:hover {
+    cursor: pointer;
+}
+
+#menus_box {
+    display: flex;
+    gap: 50px;
+}
+
+/* Textos de información de las cajas */
+/* --------------------------------- */
+
+.fuente_montserrat {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fuente_montserrat_verde {
+    color: #c9e265;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Desplegable */
+/* --------------------------------- */
+
+#desplegable {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#menu_media_query {
+    display: none;
+}
+
+nav {
+    margin: 130px 50px 0px 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: block;
+    width: 100%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid white;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+ul li:hover {
+    color: #c9e265;
+    cursor: pointer;
+}
+
+/* Footer desplegable */
+/* --------------------------------- */
+
+#footer_desplegable {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 40px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#footer_desplegable a {
+    text-decoration: none;
+}
+
+#footer_desplegable .ampliar {
+    transition: transform 0.2s;
+}
+
+#footer_desplegable .ampliar:hover {
+    transform: scale(1.2);
+}
+
+#footer_desplegable h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
+    position: static;
+    overflow: visible;
+}
+
+#footer_desplegable img {
+    width: 10%;
+    margin-right: 20px;
+    max-width: 70px;
+}
+
+#marco_h2 {
+    width: 15%;
+    height: auto;
+    overflow: visible;
+}
+
+
+/* Plantilla con las opciones de la carta */
+/* --------------------------------- */
+
+h1 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 1px solid white;
+    margin-bottom: 3vh;
+    padding-bottom: 10px;
+}
+
+#caja_pedido_top {
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-top: 18px;
+}
+
+#caja_pedido {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    margin-right: 80px;
+    margin-bottom: 90px;
+}
+
+#circulo_cubiertos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    background-color: #1a1b1e;
+}
+
+#circulo_cubiertos:hover {
+    cursor: pointer;
+}
+
+#circulo_numero_pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: #1a1b1e;
+}
+
+#plantilla_carta {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    align-items: flex-start;
+    padding-bottom: 120px;
+    margin: 0px 45px 0px 45px;
+}
+
+#plantilla_carta div {
+    filter: grayscale(80%);
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: filter 0.5s;
+    
+}
+
+#plantilla_carta div:hover {
+    filter: none;
+    cursor: pointer;
+}
+
+.caja_absolute {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 12px;
+}
+
+.icono {
+    width: 4vh;
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+#icono_bebidas {
+    width: 3.7vh;
+    padding-left: 6px; 
+    max-height: 45px;
+}
+
+#icono_principales {
+    margin-top: 20px;
+}
+
+#icono_postres {
+    width: 3.7vh;
+    padding-left: 6px; 
+    margin-top: 17px;
+}
+
+#plantilla_carta div h2 {
+    color: white;
+    margin-top: 7px;
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3vh;
+}
+
+#plantilla_carta div h2 span {
+    color: #c9e265;
+}
+
+.imagen_fondo {
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    width: 100%;
+    transition: transform 1s;
+}
+
+.imagen_fondo:hover {
+    transform: scale(1.1);
+}
+
+#cuadricula {
+    overflow-y: scroll;
+    height: 85%;
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+}
+
+.caja {
+    height: 35% !important;
+}
+
+
+
+/* Footer */
+/* --------------------------------- */
+
+.ampliar {
+    transition: transform 0.2s;
+}
+
+.ampliar:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+#footer_main {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#footer_main img {
+    width: 20%;
+    max-width: 36px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+/* Filtro que oscurece el fondo */
+/* --------------------------------- */
+
+#filtro_oscurecer {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    background-image: url(../../media/img/Imagenes/Principales/tallarines_remolacha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Transiciones */
+/* --------------------------------- */
+
+.fadeIn {
+    opacity: 1;
+}
+
+.opacidad {
+    opacity: 0;
+}
+
+
+/* MEDIA QUERIES: */
+/* --------------------------------- */
+
+/* Dispositivos pequeños: */
+/* --------------------------------- */
+
+@media all and (max-width: 300px) {
+
+    /* Header */
+
+    #titulos {
+        width: 55%;
+        max-width: 330px;
+        object-fit: contain;
+    }
+
+    #titulos:hover {
+        cursor: pointer;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    #menu_hamburguesa {
+        width: 10%;
+        max-width: 70px;
+        margin: 10px 20px 0px 0px;
+    }
+
+    #menu_hamburguesa:hover {
+        cursor: pointer;
+    }
+
+    #menu_hamburguesa_verde {
+        width: 10%;
+        max-width: 70px;
+        margin: 10px 20px 0px 0px;
+        display: none;
+    }
+
+    #menu_hamburguesa_verde:hover {
+        cursor: pointer;
+    }
+
+    /* Plantilla con opciones de la carta */
+
+    #plantilla_carta {
+        align-items: flex-start;
+        margin-left: 29px;
+        margin-top: 25px;
+    }
+
+    #plantilla_carta div {
+        width: 77%;
+        height: 13%;
+        justify-content: center;
+    }
+
+    .caja_absolute {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #icono_bebidas, #icono_postres {
+        width: 5.7vh;
+        padding-left: 6px; 
+    }
+
+    .caja_absolute img {
+        padding-right: 10px;
+        width: 6vh;
+        margin: 0;
+        margin-left: 17px;
+    }
+
+    h1 {
+        width: 77%;
+        margin-bottom: 30px;
+        font-size: 11px;
+    }
+
+    #plantilla_carta div h2 {
+        margin: 0;
+        margin-top: 9%;
+        margin-left: 16px;
+        font-size: 1.7vh;
+    }
+}
+
+@media all and (max-width: 530px) {
+
+    .imagen_fondo {
+        opacity: 30%;
+    }
+
+    #menu_hamburguesa_verde, #menu_hamburguesa {
+        max-width: 100px;
+    }
+
+    #cuadricula {
+        height: 80% !important;
+    }
+}
+
+/* Tabletas y dispositivos medianos: */
+/* --------------------------------- */
+
+@media all and (min-width: 530px) and (max-width: 600px) {
+    #cuadricula {
+        height: 80% !important;
+    }
+}
+
+@media all and (min-width: 601px) {
+
+    /* Plantilla con opciones de la carta */
+
+    #icono_bebidas, #icono_postres {
+        padding-left: 6px; 
+        width: 3.9vh;
+        margin-top: 5px;
+    }
+
+    .caja_absolute img {
+        padding-right: 10px;
+        width: 4.5vh;
+        margin-left: 30px;
+        max-width: 70px;
+        max-height: 70px;
+        min-height: 20px;
+        min-width: 35px;
+    }
+
+    h1 {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    #plantilla_carta div h2 {
+        margin: 0;
+        margin-top: 10%;
+        margin-left: 30px;
+        font-size: 1.8vh;
+    }
+
+    /* Desplegable */
+
+    #desplegable {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        opacity: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #menu_media_query {
+        display: none;
+    }
+
+    nav {
+        margin: 160px 60px 0px 60px;
+    }
+
+    ul {
+        list-style: none;
+        
+    }
+
+    ul li {
+        display: block;
+        width: 100%;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+        border-bottom: 1px solid white;
+        margin-bottom: 5%;
+        padding-bottom: 10px;
+    }
+
+    ul a {
+        text-decoration: none;
+    }
+
+    ul li:hover {
+        color: #c9e265;
+        cursor: pointer;
+    }
+
+    /* Footer menú desplegable */
+
+    #footer_desplegable h2 {
+        font-size: 32px;
+    }
+
+}
+
+@media all and (min-width: 1000px) {
+
+    
+
+    /* Plantilla con opciones de la carta */
+
+    .caja_absolute {
+        flex-direction: row;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: 30px;
+        height: auto;
+    }
+
+    .icono {
+        height: auto;
+    }
+
+    #icono_postres {
+        width: 7.8vh;
+        padding-left: 6px; 
+    }
+
+    #icono_bebidas {
+        width: 65px;
+        max-height: none;
+        height: 65px;
+        padding-left: 6px;
+    }
+
+
+    .caja_absolute img {
+        padding-right: 10px;
+        width: 9vh;
+        margin: 0;
+        margin-left: 17px;
+    }
+
+    h1 {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 1.3em;
+    }
+
+    #plantilla_carta div h2 {
+        margin: 0;
+        margin-top: 5%;
+        margin-left: 40px;
+        font-size: 2vh;
+    }
+
+    #caja_menus h2 {
+        padding-left: 5px;
+    }
+
+    #caja_postres .caja_absolute h2, #caja_bebidas .caja_absolute h2 {
+        margin-left: 45px;
+    }
+
+    /* Footer */
+
+    #footer_main img {
+        width: 40px;
+    }
+
+}
+
+/* Desktop: */
+/* --------------------------------- */
+
+@media all and (min-width: 1300px) {
+
+    /* Plantilla con opciones de la carta */
+
+    #plantilla_carta {
+        justify-content: flex-start;
+        height: 95vh;
+        padding-bottom: 120px;
+    }
+
+    #cuadricula {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    #plantilla_carta div {
+        width: 49%;
+        height: 25vh;
+        margin: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 8px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .caja_absolute {
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    #caja_bebidas {
+        width: 100% !important;
+        
+    }
+
+    h1 {
+        width: 100%;
+    }
+
+    #plantilla_carta div h2 {
+        margin: 0;
+        margin-top: 8%;
+        margin-left: 1vw;
+        font-size: 2vh;
+    }
+
+    #caja_postres .caja_absolute h2,  #caja_bebidas .caja_absolute h2, #caja_menus .caja_absolute h2 {
+        margin-left: 1vw;
+        margin-top: 15%;
+    }
+
+    /* Header */
+    
+    #menu_hamburguesa {
+        display: none !important;
+    }
+
+    #menu_hamburguesa_verde {
+        display: none;
+    }
+
+    /* Menú superior */
+
+    #menu_media_query {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: center;
+        width: 70%;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 40px;
+        padding-right: 40px;
+    }
+
+    #menu_media_query ul {
+        text-align: center;
+    }
+
+    #menu_media_query li {
+        border: none;
+        display: inline;
+        margin-left: 30px;
+        font-size: 1.3vw;
+    }
+    
+    /* Desplegable */
+
+    ul li {
+        font-size: 20px;
+    }
+
+    /* Footer */
+
+    #footer main {
+        padding-top: 0px;
+    }
+
+    #footer_main img {
+        max-width: 48px;
+    }
+
+}
+
+/* Desktop full-width: */
+/* --------------------------------- */
+
+@media all and (min-width: 1700px) {
+
+    /* Plantilla con opciones de la carta */
+
+    .caja_absolute {
+        margin-left: 15px;
+    }
+
+    .icono {
+        max-width: 60px;
+        max-height: 60px;
+        margin-left: 20px;
+        margin-top: 20px;
+        align-self: flex-start;
+    }
+
+    /* Menú superior */
+
+    #menu_media_query li {
+        font-size: 22px;
+    }
+
+    /* Desplegable */
+
+    ul li {
+        font-size: 20px;
+        margin-bottom: 78px;
+    }
+}
+
+@media all and (max-height: 500px) {
+
+    /* Footer desplegable */
+
+    #footer_desplegable {
+        display: none;
+    }
+}
+
+@media all and (max-height: 835px) and (max-width: 999px) {
+
+    #footer_main {
+        display: none;
+    }
+
+    #plantilla_carta {
+        height: 100vh;
+    }
+
+    /* Plantilla con opciones de la carta */
+
+    #icono_principales, #icono_entrantes {
+        width: 23%;
+        padding-left: 2px; 
+        min-width: 40px;
+    }
+
+    #icono_bebidas, #icono_postres {
+        width: 23%;
+    }
+
+    #icono_menus {
+        padding-top: 5px;
+        width: 27%;
+    }
+
+    .caja_absolute {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    #plantilla_carta div h2 {
+       
+        padding-bottom: 6px;
+        font-size: 13px !important;
+        margin-left: 15px;
+    }
+
+    #caja_postres .caja_absolute h2, #caja_bebidas .caja_absolute h2, #caja_menus .caja_absolute h2 {
+        margin-left: 25px;
+    }
+}
+
+@media all and (max-height: 835px) and (min-width: 1000px) {
+
+    .caja_absolute h2 {
+        font-size: 20px !important;
+    }
+}
+
+@media all and (max-height: 950px) {
+
+    header {
+        padding-bottom: 30px;
+    }
+    
+    #plantilla_carta div {
+        height: 13.2vh;
+    }
+
+    #plantilla_carta div h2 {
+        font-size: 2vh;
+    }
+
+    #plantilla_carta {
+        align-content: flex-start;
+        height: 100vh;
+    }
+
+    #footer_main {
+        margin-top: 30px;
+    }
+
+    .icono {
+        width: 5.8vh !important;
+    }
+
+    #icono_bebidas {
+        height: 5vh;
+    }
+
+    /* Menú desplegable */
+
+    #lista {
+        margin-top: 140px;
+    }
+
+    #lista ul li {
+        margin-bottom: 3vh;
+    }
+}
+
+@media all and (max-height: 1025px) {
+
+    #plantilla_carta div {
+        height: 13vh;
+    }
+}
+
+@media all and (max-height: 1025px) and (min-width: 1300px) {
+
+    #plantilla_carta div {
+        height: 21.5vh;
+    }
+}
+
+@media all and (max-height: 801px) and (min-width: 1024px) {
+
+    .caja {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    #cuadricula {
+        flex-wrap: wrap !important;
+        height: 70% !important;
+    }
+
+    .caja_absolute {
+        width: auto !important;
+        margin-left: 10% !important;
+        flex-direction: row !important;
+        gap: 30px;
+        margin-top: 70px;
+    }
+
+    #icono_bebidas {
+        height: auto !important;
+    }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1281px) and (max-height: 801px) {
+
+    #cuadricula {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    #cuadricula div {
+        width: 18%;
+        height: 90%;
+    }
+
+    .caja_absolute {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .caja_absolute h2 {
+        padding: 10px 0px 0px 0px !important;
+        margin: 0px !important;
+    }
+
+    #caja_postres img {
+        object-position: right;
+    }
+
+    #icono_bebidas {
+        max-height: 44px;
+        width: 10px !important;
+    }
+
+    #icono_postres {
+        height: 40px;
+        width: 35px !important;
+    }
+
+    #icono_principales {
+        margin-top: 10px !important;
+        height: 30px;
+    }
+
+    #icono_menus {
+        width: 40px !important;
+    }
+
+    .icono {
+        margin: 0px !important;
+        padding: 0px !important;
+        align-self: center;
+    }
+
+    .imagen_fondo {
+        height: 100%;
+    }
+
+    #footer_desplegable img {
+        width: 4%;
+    }
+}
+
+@media all and (max-height: 660px) and (max-width: 285px) {
+
+    #plantilla_carta {
+        width: 100%;
+        height: 100vh;
+        margin-top: 70px;
+    }
+
+    header {
+        padding-bottom: 0px;
+    }
+
+    #plantilla_carta div {
+        height: 13.2vh;
+    }
+}

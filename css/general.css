@@ -1,0 +1,58 @@
+/* Scroll bar */ 
+
+@media all and (max-width: 600px) {
+    ::-webkit-scrollbar {
+        width: 5px !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #35373d;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #c9e265;
+}
+
+/* Controlar el ancho de pantalla en formato desktop */
+
+#contenido_general {
+    max-width: 1500px;
+    margin: auto;
+}
+
+#desplegable, #filtro_oscurecer, #footer_add_order {
+    max-width: 1500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Menú cubiertos superior */
+
+.general_cart {
+    width: 9vw;
+    max-width: 46px;
+    max-height: 45px;
+}
+
+.general_cart:hover {
+    cursor: pointer;
+}
+
+#caja_pedido_top {
+    overflow: visible;
+}
+
